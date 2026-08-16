@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="CAY - Digital Safety & Anti-Blackmail Awareness. منصة توعوية للمساعدة على التعامل الآمن مع الابتزاز الإلكتروني وحماية الخصوصية.">
+<meta name="theme-color" content="#061018">
+<title>CAY | Digital Safety & Anti-Blackmail Awareness</title>
+<style>
+:root{--bg:#05080c;--panel:#0b1219;--panel2:#0e1821;--text:#f4f8fb;--muted:#a7b3bd;--accent:#00e5ff;--line:#1a2a35;--warn:#ffd166}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Tahoma,sans-serif;background:var(--bg);color:var(--text);line-height:1.75}
+a{color:inherit}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(5,8,12,.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{max-width:1120px;margin:auto;padding:13px 18px;display:flex;align-items:center;justify-content:space-between;gap:15px}
+.brand{font-size:24px;font-weight:900;letter-spacing:4px;color:var(--accent)}
+.links{display:flex;gap:18px}
+.links a{text-decoration:none;color:#d8e0e6;font-size:14px}
+.links a:hover{color:var(--accent)}
+.lang{border:1px solid var(--accent);background:transparent;color:var(--accent);border-radius:20px;padding:7px 13px;cursor:pointer;font-weight:bold}
+.hero{min-height:100vh;display:grid;place-items:center;text-align:center;padding:120px 18px 70px;background:radial-gradient(circle at 50% 18%,#123344 0,transparent 34%),linear-gradient(180deg,#071019,#05080c)}
+.hero-inner{max-width:820px}
+.logo{font-size:clamp(70px,19vw,125px);font-weight:900;letter-spacing:14px;color:var(--accent);text-shadow:0 0 12px rgba(0,229,255,.8),0 0 35px rgba(0,229,255,.35)}
+h1{font-size:clamp(27px,6vw,48px);margin:5px 0 14px}
+.hero p{color:var(--muted);font-size:18px;max-width:700px;margin:0 auto 28px}
+.actions{display:flex;justify-content:center;flex-wrap:wrap;gap:11px}
+.btn{display:inline-block;text-decoration:none;padding:12px 25px;border-radius:30px;background:var(--accent);color:#001116;font-weight:800}
+.btn.alt{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+main{max-width:1120px;margin:auto}
+section{padding:80px 18px}
+.title{text-align:center;margin-bottom:38px}
+.title h2{font-size:32px;color:var(--accent)}
+.title p{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:26px;transition:.25s}
+.card:hover{transform:translateY(-4px);border-color:var(--accent)}
+.icon{font-size:38px;margin-bottom:8px}
+.card h3{margin-bottom:7px}
+.card p{color:var(--muted);font-size:15px}
+.steps{display:grid;gap:13px}
+.step{background:var(--panel);border-right:4px solid var(--accent);padding:19px;border-radius:12px}
+.step strong{color:var(--accent)}
+.step p{color:var(--muted);margin-top:3px}
+.notice{margin-top:20px;background:#211c0b;border:1px solid #67551a;color:#f1d67a;padding:18px;border-radius:14px}
+.about{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:30px;text-align:center}
+.taym{color:var(--accent);font-weight:900}
+.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.contact .card{text-align:center}
+.contact a{color:var(--accent);text-decoration:none;word-break:break-word}
+footer{text-align:center;border-top:1px solid var(--line);padding:30px 18px;color:#71808b;font-size:14px}
+#top{position:fixed;bottom:18px;left:18px;width:44px;height:44px;border:0;border-radius:50%;background:var(--accent);color:#001116;font-size:20px;font-weight:bold;display:none;cursor:pointer}
+[dir="ltr"] .step{border-right:0;border-left:4px solid var(--accent)}
+@media(max-width:700px){
+ .nav{justify-content:center}.links{display:none}
+ section{padding:62px 14px}.hero p{font-size:16px}
+ .actions .btn{width:92%;max-width:290px}
+}
+</style>
+</head>
+<body>
+<nav>
+<div class="nav">
+<div class="brand">CAY</div>
+<div class="links">
+<a href="#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+<a href="#services" data-ar="الخدمات" data-en="Services">الخدمات</a>
+<a href="#help" data-ar="المساعدة" data-en="Get Help">المساعدة</a>
+<a href="#about" data-ar="عن CAY" data-en="About">عن CAY</a>
+<a href="#contact" data-ar="التواصل" data-en="Contact">التواصل</a>
+</div>
+<button class="lang" id="langBtn" type="button">English</button>
+</div>
+</nav>
+
+<header class="hero" id="home">
+<div class="hero-inner">
+<div class="logo">CAY</div>
+<h1 id="heroTitle">معًا ضد الابتزاز الإلكتروني</h1>
+<p id="heroText">منصة توعوية تساعد الأشخاص على التعامل مع الابتزاز الإلكتروني بطريقة آمنة، وحماية الخصوصية والحسابات.</p>
+<div class="actions">
+<a class="btn" href="#help" id="helpBtn">🚨 ماذا أفعل؟</a>
+<a class="btn alt" href="#contact" id="contactBtn">📞 تواصل معنا</a>
+</div>
+</div>
+</header>
+
+<main>
+<section id="services">
+<div class="title">
+<h2 id="servicesTitle">خدمات CAY</h2>
+<p id="servicesSub">Digital Safety • Privacy • Awareness</p>
+</div>
+<div class="grid">
+<div class="card"><div class="icon">🛡️</div><h3 id="c1h">الحماية الرقمية</h3><p id="c1p">إرشادات بسيطة لحماية الحسابات والبيانات الشخصية من المخاطر الإلكترونية.</p></div>
+<div class="card"><div class="icon">🚨</div><h3 id="c2h">مواجهة الابتزاز</h3><p id="c2p">خطوات آمنة للتعامل مع الابتزاز وتجنب إرسال أموال أو معلومات إضافية للمبتز.</p></div>
+<div class="card"><div class="icon">🔐</div><h3 id="c3h">تأمين الحسابات</h3><p id="c3p">تعلم استخدام كلمات مرور قوية وتفعيل التحقق بخطوتين وحماية الحسابات.</p></div>
+</div>
+</section>
+
+<section id="help">
+<div class="title">
+<h2 id="helpTitle">إذا تعرضت للابتزاز</h2>
+<p id="helpSub">اتبع هذه الخطوات واحمِ نفسك</p>
+</div>
+<div class="steps">
+<div class="step"><strong id="s1h">1️⃣ لا تدفع للمبتز</strong><p id="s1p">الدفع لا يضمن انتهاء الابتزاز وقد يؤدي إلى طلب المزيد.</p></div>
+<div class="step"><strong id="s2h">2️⃣ احتفظ بالأدلة</strong><p id="s2p">احتفظ بلقطات الشاشة والرسائل وروابط الحسابات عندما يكون ذلك آمنًا.</p></div>
+<div class="step"><strong id="s3h">3️⃣ لا ترسل معلومات إضافية</strong><p id="s3p">لا ترسل كلمات المرور أو رموز التحقق أو صورًا إضافية.</p></div>
+<div class="step"><strong id="s4h">4️⃣ أبلغ المنصة</strong><p id="s4p">استخدم أدوات الإبلاغ الرسمية في التطبيق أو الموقع الذي حدث فيه الابتزاز.</p></div>
+<div class="step"><strong id="s5h">5️⃣ اطلب دعمًا موثوقًا</strong><p id="s5p">تحدث مع شخص بالغ موثوق، وإذا كان هناك تهديد حقيقي فتواصل مع الجهات المختصة في بلدك.</p></div>
+</div>
+<div class="notice" id="notice">⚠️ لا تشارك كلمات المرور أو رموز التحقق أو بيانات البطاقات مع أي شخص. CAY لا يطلب هذه المعلومات.</div>
+</section>
+
+<section id="about">
+<div class="title"><h2 id="aboutTitle">عن CAY</h2></div>
+<div class="about">
+<p id="aboutText">CAY مشروع توعوي يهدف إلى نشر الوعي بالأمان الرقمي ومساعدة الأشخاص على اتخاذ خطوات أكثر أمانًا عند مواجهة الابتزاز الإلكتروني. CAY ليس جهة حكومية أو شرطة ولا يحل محل الجهات المختصة.</p>
+<br><p id="owner">إدارة الموقع: <span class="taym">TAYM</span></p>
+</div>
+</section>
+
+<section id="contact">
+<div class="title">
+<h2 id="contactTitle">تواصل معنا</h2>
+<p id="contactSub">للاستفسارات العامة والتواصل</p>
+</div>
+<div class="contact">
+<div class="card"><div class="icon">📞</div><h3 id="phoneTitle">الهاتف</h3><a href="tel:07883350604">07883350604</a></div>
+<div class="card"><div class="icon">📧</div><h3 id="emailTitle">البريد الإلكتروني</h3><a href="mailto:Scaroo0026@gmail.com">Scaroo0026@gmail.com</a></div>
+</div>
+</section>
+</main>
+
+<footer>
+<p>© 2026 CAY — Digital Safety & Anti-Blackmail Awareness</p>
+<p id="footerText">التوعية الرقمية • الخصوصية • الأمان</p>
+</footer>
+
+<button id="top" type="button" aria-label="Back to top">↑</button>
+
+<script>
+const ar={
+dir:"rtl",lang:"العربية",title:"معًا ضد الابتزاز الإلكتروني",
+hero:"منصة توعوية تساعد الأشخاص على التعامل مع الابتزاز الإلكتروني بطريقة آمنة، وحماية الخصوصية والحسابات.",
+help:"🚨 ماذا أفعل؟",contact:"📞 تواصل معنا",services:"خدمات CAY",servicesSub:"الأمان الرقمي • الخصوصية • التوعية",
+c1h:"الحماية الرقمية",c1p:"إرشادات بسيطة لحماية الحسابات والبيانات الشخصية من المخاطر الإلكترونية.",
+c2h:"مواجهة الابتزاز",c2p:"خطوات آمنة للتعامل مع الابتزاز وتجنب إرسال أموال أو معلومات إضافية للمبتز.",
+c3h:"تأمين الحسابات",c3p:"تعلم استخدام كلمات مرور قوية وتفعيل التحقق بخطوتين وحماية الحسابات.",
+helpTitle:"إذا تعرضت للابتزاز",helpSub:"اتبع هذه الخطوات واحمِ نفسك",
+s1h:"1️⃣ لا تدفع للمبتز",s1p:"الدفع لا يضمن انتهاء الابتزاز وقد يؤدي إلى طلب المزيد.",
+s2h:"2️⃣ احتفظ بالأدلة",s2p:"احتفظ بلقطات الشاشة والرسائل وروابط الحسابات عندما يكون ذلك آمنًا.",
+s3h:"3️⃣ لا ترسل معلومات إضافية",s3p:"لا ترسل كلمات المرور أو رموز التحقق أو صورًا إضافية.",
+s4h:"4️⃣ أبلغ المنصة",s4p:"استخدم أدوات الإبلاغ الرسمية في التطبيق أو الموقع الذي حدث فيه الابتزاز.",
+s5h:"5️⃣ اطلب دعمًا موثوقًا",s5p:"تحدث مع شخص بالغ موثوق، وإذا كان هناك تهديد حقيقي فتواصل مع الجهات المختصة في بلدك.",
+notice:"⚠️ لا تشارك كلمات المرور أو رموز التحقق أو بيانات البطاقات مع أي شخص. CAY لا يطلب هذه المعلومات.",
+about:"عن CAY",aboutText:"CAY مشروع توعوي يهدف إلى نشر الوعي بالأمان الرقمي ومساعدة الأشخاص على اتخاذ خطوات أكثر أمانًا عند مواجهة الابتزاز الإلكتروني. CAY ليس جهة حكومية أو شرطة ولا يحل محل الجهات المختصة.",
+owner:"إدارة الموقع: TAYM",contactTitle:"تواصل معنا",contactSub:"للاستفسارات العامة والتواصل",phone:"الهاتف",email:"البريد الإلكتروني",footer:"التوعية الرقمية • الخصوصية • الأمان"
+};
+const en={
+dir:"ltr",lang:"English",title:"Together Against Online Blackmail",
+hero:"CAY is an awareness platform that helps people respond to online blackmail safely and protect their privacy and accounts.",
+help:"🚨 What should I do?",contact:"📞 Contact us",services:"CAY Services",servicesSub:"Digital Safety • Privacy • Awareness",
+c1h:"Digital Safety",c1p:"Simple guidance for protecting accounts and personal information from online risks.",
+c2h:"Respond to Blackmail",c2p:"Safer steps for dealing with blackmail and avoiding payments or sharing more information.",
+c3h:"Secure Your Accounts",c3p:"Learn about strong passwords, two-factor authentication, and account protection.",
+helpTitle:"If You Are Being Blackmailed",helpSub:"Follow these steps and protect yourself",
+s1h:"1️⃣ Do not pay the blackmailer",s1p:"Payment does not guarantee that the blackmail will stop and may lead to more demands.",
+s2h:"2️⃣ Preserve evidence",s2p:"Keep screenshots, messages, and account links when it is safe to do so.",
+s3h:"3️⃣ Do not share more information",s3p:"Never share passwords, verification codes, or additional private images.",
+s4h:"4️⃣ Report the account",s4p:"Use the official reporting tools provided by the platform where the blackmail occurred.",
+s5h:"5️⃣ Seek trusted support",s5p:"Talk to a trusted adult. If there is a real threat, contact the appropriate authorities in your country.",
+notice:"⚠️ Never share passwords, verification codes, or card details with anyone. CAY will never ask for them.",
+about:"About CAY",aboutText:"CAY is an awareness project focused on digital safety and helping people take safer steps when facing online blackmail. CAY is not a government agency or police service and does not replace official authorities.",
+owner:"Website managed by: TAYM",contactTitle:"Contact Us",contactSub:"For general questions and communication",phone:"Phone",email:"Email",footer:"Digital Awareness • Privacy • Safety"
+};
+
+let current="ar";
+function setLanguage(){
+const d=current==="ar"?ar:en;
+document.documentElement.lang=current;
+document.documentElement.dir=d.dir;
+document.getElementById("langBtn").textContent=current==="ar"?"English":"العربية";
+document.getElementById("heroTitle").textContent=d.title;
+document.getElementById("heroText").textContent=d.hero;
+document.getElementById("helpBtn").textContent=d.help;
+document.getElementById("contactBtn").textContent=d.contact;
+document.getElementById("servicesTitle").textContent=d.services;
+document.getElementById("servicesSub").textContent=d.servicesSub;
+["c1h","c1p","c2h","c2p","c3h","c3p","helpTitle","helpSub","s1h","s1p","s2h","s2p","s3h","s3p","s4h","s4p","s5h","s5p","notice","aboutTitle","aboutText","owner","contactTitle","contactSub","footerText"].forEach(id=>{if(document.getElementById(id))document.getElementById(id).textContent=d[id]});
+document.querySelectorAll("[data-ar]").forEach(a=>a.textContent=current==="ar"?a.dataset.ar:a.dataset.en);
+document.getElementById("phoneTitle").textContent=d.phone;
+document.getElementById("emailTitle").textContent=d.email;
+document.title=current==="ar"?"CAY | مكافحة الابتزاز الإلكتروني":"CAY | Digital Safety & Anti-Blackmail Awareness";
+localStorage.setItem("cay-lang",current);
+}
+document.getElementById("langBtn").onclick=()=>{current=current==="ar"?"en":"ar";setLanguage()};
+if(localStorage.getItem("cay-lang")==="en")current="en";
+setLanguage();
+const top=document.getElementById("top");
+window.addEventListener("scroll",()=>top.style.display=scrollY>450?"block":"none");
+top.onclick=()=>scrollTo({top:0,behavior:"smooth"});
+</script>
+</body>
+</html>
