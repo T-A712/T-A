@@ -1,174 +1,34 @@
-<p>
-      معلومات مهمة تساعدك على التصرف بشكل صحيح.
-    </p>
+<!-- ================= MUSIC SCRIPT ================= -->
 
-  </div>
+  <script>
 
-  <div class="warning-box">
+    const music =
+      document.getElementById("backgroundMusic");
 
-    <strong>
-      مهم:
-    </strong>
+    const musicButton =
+      document.getElementById("musicButton");
 
-    إذا كنت تتعرض للابتزاز،
-    لا تدفع ولا ترسل صورًا أو معلومات إضافية للمبتز،
-    واحتفظ بالأدلة.
 
-  </div>
+    function toggleMusic() {
 
-  <div class="cards">
+      if (music.paused) {
 
-    <article class="card">
+        music.play();
 
-      <div class="icon">
-        🛑
-      </div>
+        musicButton.textContent = "🔊";
 
-      <h3>
-        لا تدفع
-      </h3>
+      } else {
 
-      <p>
-        لا ترسل المال ولا الصور ولا أي معلومات إضافية
-        للشخص الذي يهددك.
-      </p>
+        music.pause();
 
-    </article>
+        musicButton.textContent = "🎵";
 
-    <article class="card">
+      }
 
-      <div class="icon">
-        📸
-      </div>
+    }
 
-      <h3>
-        احتفظ بالأدلة
-      </h3>
+  </script>
 
-      <p>
-        احتفظ بلقطات شاشة للرسائل والتهديدات
-        واسم الحساب، ولا تحذف الأدلة.
-      </p>
-
-    </article>
-
-    <article class="card">
-
-      <div class="icon">
-        🔒
-      </div>
-
-      <h3>
-        أمّن حسابك
-      </h3>
-
-      <p>
-        غيّر كلمات المرور وفعّل التحقق بخطوتين
-        واجعل حساباتك أكثر خصوصية.
-      </p>
-
-    </article>
-
-    <article class="card">
-
-      <div class="icon">
-        👨‍👩‍👦
-      </div>
-
-      <h3>
-        لا تواجه وحدك
-      </h3>
-
-      <p>
-        أخبر شخصًا بالغًا تثق به، واطلب المساعدة
-        إذا استمر التهديد.
-      </p>
-
-    </article>
-
-  </div>
-
-</section>
-
-<section id="contact">
-
-  <div class="section-title">
-
-    <h2>
-      ✦ التــواصــل ✦
-    </h2>
-
-    <p>
-      يمكنك التواصل معنا عبر الهاتف أو البريد الإلكتروني.
-    </p>
-
-  </div>
-
-  <div class="contact-box">
-
-    <div class="contact-card">
-
-      <div class="icon">
-        📞
-      </div>
-
-      <h3>
-        رقم الهاتف
-      </h3>
-
-      <p class="contact-info">
-        07883350604
-      </p>
-
-      <a
-        href="tel:07883350604"
-        class="btn btn-primary"
-      >
-        اتصال
-      </a>
-
-    </div>
-
-    <div class="contact-card">
-
-      <div class="icon">
-        📧
-      </div>
-
-      <h3>
-        البريد الإلكتروني
-      </h3>
-
-      <p class="contact-info">
-        Scaroo0026@gmail.com
-      </p>
-
-      <a
-        href="mailto:Scaroo0026@gmail.com"
-        class="btn btn-primary"
-      >
-        إرسال إيميل
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-</main>
-
-<footer>
-
-  <p>
-    © 2026 CAY Iraq — جميع الحقوق محفوظة 🇮🇶
-  </p>
-
-  <p class="security">
-    🛡️ CAY Iraq — المنقذ من الابتزاز الإلكتروني
-  </p>
-
-</footer>
 
 </body>
 </html>
