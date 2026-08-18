@@ -46,14 +46,23 @@ nav{
     border-bottom:1px solid #202020;
 }
 
-.logo{
-    font-size:28px;
-    font-weight:bold;
-    letter-spacing:3px;
+.logo {
+    display: flex;
+    align-items: center;
 }
 
-.logo span{
-    color:#8b5cf6;
+.logo img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    border-radius: 50%;
+    transition: 0.4s ease;
+    filter: drop-shadow(0 0 10px rgba(139, 92, 246, 0.45));
+}
+
+.logo img:hover {
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.8));
 }
 
 nav ul{
@@ -426,9 +435,9 @@ footer{
 
 <nav>
 
-<div class="logo">
-T-<span>A</span>
-</div>
+<a href="#home" class="logo">
+    <img src="ta-logo.png" alt="T-A Studio">
+</a>
 
 <ul>
 <li><a href="#home">الرئيسية</a></li>
