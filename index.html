@@ -3,7 +3,7 @@
 
 <head>
 <meta charset="UTF-8">
-<meta name="T-A" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>T-A Studio | تصميم مواقع احترافية</title>
 
@@ -491,11 +491,10 @@ footer{
 
 <nav>
 
-<a href="#home" class="logo">
-    <span class="logo-t">T</span>
-    <span class="logo-dash">-</span>
-    <span class="logo-a">A</span>
-</a>
+.logo {
+    direction: ltr;
+    unicode-bidi: isolate;
+}
 <ul>
 <li><a href="#home">الرئيسية</a></li>
 <li><a href="#services">الخدمات</a></li>
