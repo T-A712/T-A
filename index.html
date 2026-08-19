@@ -81,22 +81,44 @@ nav{
 }
 
 .logo {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-}
-
-.logo img {
-    width: 65px;
-    height: 65px;
-    object-fit: contain;
+    justify-content: center;
+    width: 75px;
+    height: 75px;
+    border: 2px solid #7c3cff;
     border-radius: 50%;
+    text-decoration: none;
+    background: #050505;
+    box-shadow:
+        0 0 10px #7c3cff,
+        0 0 25px rgba(0, 174, 255, 0.6);
     transition: 0.4s ease;
-    filter: drop-shadow(0 0 10px rgba(139, 92, 246, 0.45));
 }
 
-.logo img:hover {
+.logo:hover {
     transform: scale(1.08);
-    filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.8));
+    box-shadow:
+        0 0 15px #7c3cff,
+        0 0 40px #00aeff;
+}
+
+.logo-t {
+    color: white;
+    font-size: 38px;
+    font-weight: 900;
+}
+
+.logo-dash {
+    color: #a855f7;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.logo-a {
+    color: #00aeff;
+    font-size: 38px;
+    font-weight: 900;
 }
 
 nav ul{
@@ -470,9 +492,10 @@ footer{
 <nav>
 
 <a href="#home" class="logo">
-    <img src="ta-logo.png" alt="T-A Studio">
+    <span class="logo-t">T</span>
+    <span class="logo-dash">-</span>
+    <span class="logo-a">A</span>
 </a>
-
 <ul>
 <li><a href="#home">الرئيسية</a></li>
 <li><a href="#services">الخدمات</a></li>
